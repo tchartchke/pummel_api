@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_11_184908) do
+ActiveRecord::Schema.define(version: 2021_05_15_211013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "levels", force: :cascade do |t|
+    t.integer "level"
+    t.integer "passingScore"
+    t.integer "speedMin"
+    t.integer "speedMax"
+    t.integer "concurrency"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "name"
