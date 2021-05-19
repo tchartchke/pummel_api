@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :notes
-  # resources :players
 
   namespace :api do
     resources :levels, only: [:index, :show]
