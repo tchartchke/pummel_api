@@ -9,9 +9,11 @@
 Player.destroy_all
 Level.destroy_all
 
-Player.create(name: 'Alex', score: 300, play_date: Date.today)
-Player.create(name: 'G', score: 200, play_date: Date.today - 1)
-Player.create(name: 'Luha', score: 100, play_date: Date.today + 1)
+Player.create(name: 'Alex', score: 30, play_date: Date.today)
+Player.create(name: 'G', score: 20, play_date: Date.today - 1)
+Player.create(name: 'G', score: 50, play_date: Date.today - 1)
+Player.create(name: 'Luha', score: 10, play_date: Date.today - 2)
+Player.create(name: 'Char', score: 14, play_date: Date.today - 3)
 
 Level.create([
   {level: 1, passingScore: 5, speedMin: 2000, speedMax: 6000, concurrency: 1},
@@ -19,3 +21,5 @@ Level.create([
   {level: 3, passingScore: 10, speedMin: 2000, speedMax: 6000, concurrency: 2},
   {level: 4, passingScore: 40, speedMin: 500, speedMax: 4000, concurrency: 1}
 ])
+
+# Note(comment: string, level_id: integer)

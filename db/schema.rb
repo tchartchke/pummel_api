@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_15_211013) do
+ActiveRecord::Schema.define(version: 2021_05_19_205137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 2021_05_15_211013) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "notes", force: :cascade do |t|
+    t.string "comment"
+    t.bigint "level_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["level_id"], name: "index_notes_on_level_id"
+  end
+
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.integer "score"
@@ -33,4 +41,5 @@ ActiveRecord::Schema.define(version: 2021_05_15_211013) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "notes", "levels"
 end

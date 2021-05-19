@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  resources :notes
   # resources :players
 
   namespace :api do
     resources :levels, only: [:index, :show]
     resources :players, only: [:index, :create]
+    resources :notes, only: [:index, :create]
     get '/players/top10', to: 'players#top10'
 
   end
