@@ -1,6 +1,11 @@
 class Api::PlayersController < ApplicationController
   def index
-    @players = Player.sort_by_top.limit10
+    @players = Player.all
+    render json: @players, status: 200
+  end
+
+  def top10
+    @players = Player.top_scores.limit10
     render json: @players, status: 200
   end
 
