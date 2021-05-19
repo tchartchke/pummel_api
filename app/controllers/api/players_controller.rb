@@ -1,6 +1,6 @@
 class Api::PlayersController < ApplicationController
   def index
-    @players = Player.all
+    @players = Player.sort_by_top.limit10
     render json: @players, status: 200
   end
 
