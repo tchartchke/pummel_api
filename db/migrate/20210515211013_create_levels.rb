@@ -5,7 +5,7 @@ class CreateLevels < ActiveRecord::Migration[6.1]
       t.integer :passingScore
       t.integer :speedMin
       t.integer :speedMax
-      t.integer :concurrency
+      t.integer :wait
 
       t.timestamps
     end

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_05_19_205137) do
     t.integer "passingScore"
     t.integer "speedMin"
     t.integer "speedMax"
-    t.integer "concurrency"
+    t.integer "wait"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
