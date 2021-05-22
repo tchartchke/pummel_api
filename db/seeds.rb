@@ -9,13 +9,13 @@
 Player.destroy_all
 Level.destroy_all
 
-Player.create(name: 'Josh', score: 39, play_date: Date.today - 4)
+Player.create(name: 'Josh', score: 69, play_date: Date.today - 4)
 Player.create(name: 'Graham', score: 52, play_date: Date.today - 4)
 Player.create(name: 'Rami', score: 71, play_date: Date.today - 3)
-Player.create(name: 'Esme', score: 73, play_date: Date.today - 2)
+Player.create(name: 'Esme', score: 93, play_date: Date.today - 2)
 Player.create(name: 'Joanna', score: 29, play_date: Date.today - 2)
 Player.create(name: 'Garig', score: 63, play_date: Date.today - 2)
-Player.create(name: 'Jan', score: 26, play_date: Date.today - 2)
+Player.create(name: 'Jan', score: 46, play_date: Date.today - 2)
 Player.create(name: 'Bobthany', score: 62, play_date: Date.today - 1)
 
 Level.create([
