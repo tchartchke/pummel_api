@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: pummel_api_production
-  username: pummel_api
-  password: <%= ENV['PUMMEL_API_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_URL'] %>
+  # username: pummel_api
+  # password: <%= ENV['PUMMEL_API_DATABASE_PASSWORD'] %>
